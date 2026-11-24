@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<title>Naeco's 3rd Birthday Wishes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion: a toddler's birthday, warm and cheerful, never loud
+   IDEA a carousel ticket booth: each wish is a ticket to an outing he loves
+   PICTURE an illustrated carousel with bobbing animals and balloons for "3"
+   COLOUR white ground, sky blue hero field, coral accent, sunshine support, one tint per section
+   TYPE Baloo 2 rounded display + Nunito text
+   LAYOUT laptop: title and intro left, carousel right in a sky band; phone: title, carousel, then the wish cards */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#12151d);
+--ink:light-dark(#1d2233,#f3f1ec);
+--soft:light-dark(#5b6275,#b9bccb);
+--sky:light-dark(#cfeafd,#173253);
+--sky2:light-dark(#eaf6ff,#0f1f36);
+--coral:light-dark(#f2503f,#ff7565);
+--sun:light-dark(#ffc63a,#ffcf57);
+--card:light-dark(#ffffff,#1a1e29);
+--line:light-dark(#e6e8ef,#2c3242);
+--chip:light-dark(#f3f5fa,#232838)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Nunito,system-ui,sans-serif;overflow-x:clip}
+img{max-width:100%}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.hero{background:linear-gradient(180deg,var(--sky) 0%,var(--sky2) 100%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:24px;align-items:center}
+h1{font:800 clamp(44px,7vw,80px)/1.02 "Baloo 2",system-ui,sans-serif;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--coral)}
+.lead{font-size:17px;max-width:34em;margin:0 0 20px}
+.nav{display:flex;flex-wrap:wrap;gap:8px}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;border:1px solid var(--line)}
+.nav a:hover{border-color:var(--coral)}
+.nav a:focus-visible,.chip:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.art{position:relative;padding-top:9%}
+.snap{position:absolute;top:0;right:0;width:36%;aspect-ratio:3/4;object-fit:cover;border:6px solid #fff;border-radius:6px;box-shadow:0 6px 18px rgba(20,30,60,.18);transform:rotate(4deg);z-index:1}
+.scene{width:100%;height:auto;display:block;max-height:440px}
+.bob{animation:bob 2.6s ease-in-out infinite}
+.bob.b2{animation-delay:-.9s}.bob.b3{animation-delay:-1.7s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@media(prefers-reduced-motion:reduce){.bob{animation:none}}
+section.group{padding-top:clamp(28px,4vw,48px)}
+.ghead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-bottom:16px}
+h2{font:800 clamp(28px,3.4vw,38px)/1.05 "Baloo 2",system-ui,sans-serif;letter-spacing:-.01em;margin:0}
+.ghead p{margin:0;color:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:row}
+.ph{flex:none;width:42%;aspect-ratio:3/4;align-self:stretch;display:grid;place-items:center;background:var(--tint);color:var(--deep)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph svg{width:58%;height:auto}
+.body{padding:16px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+h3{font:800 22px/1.1 "Baloo 2",system-ui,sans-serif;margin:0}
+.body p{margin:0;color:var(--soft);font-size:15px}
+.amts{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{flex:1;min-height:44px;min-width:48px;padding:0 6px;border-radius:12px;border:1px solid var(--line);background:var(--chip);color:var(--ink);font:700 15px Nunito,sans-serif;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:14px;background:#008cff;color:#fff;font:800 16px Nunito,sans-serif;text-decoration:none}
+.btn:hover{background:#0074d4}
+.btn.off{background:var(--chip);color:var(--soft);border:1px dashed var(--line);font-weight:700}
+.p1{--tint:light-dark(#ffe1ec,#3a1f2b);--deep:light-dark(#d6336c,#ff8fb4)}
+.p2{--tint:light-dark(#dff5df,#1d3322);--deep:light-dark(#2f9e44,#7fdc8e)}
+.p3{--tint:light-dark(#ece4ff,#2a2342);--deep:light-dark(#7048e8,#b9a3ff)}
+.p4{--tint:light-dark(#fff1c9,#3a3018);--deep:light-dark(#c27c00,#ffd15c)}
+.thanks{margin-top:clamp(36px,5vw,64px);background:var(--sky2);border-radius:26px;padding:clamp(22px,3vw,36px)}
+.how{margin:0 0 20px;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;font-size:15px;max-width:36em}
+.how b{color:var(--coral)}
+.thanks h2{font-size:clamp(26px,3vw,34px)}
+.thanks p{margin:0}
+.note{color:var(--soft);font-size:14px}
+footer{text-align:center;color:var(--soft);font-size:14px;padding:28px 16px 40px}
+@media(max-width:600px){
+.band{padding-left:14px;padding-right:14px}
+h1{font-size:44px;margin-bottom:10px}
+.lead{font-size:16px}
+.snap{width:42%;border-width:4px}
+.grid{gap:14px}
+.card{border-radius:18px}
+.ph{width:44%}
+.body{padding:12px;gap:8px}
+h3{font-size:19px}
+.body p{font-size:14px;line-height:1.45}
+.amts{flex-direction:column;gap:6px}
+.chip{flex:none;width:100%;min-height:42px;font-size:16px}
+.btn{min-height:46px;font-size:15px}
+.thanks{border-radius:20px}
+}
+@media(max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.scene{max-height:300px}.thanks{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="band hero">
+  <div class="wrap">
+    <div>
+      <h1>Naeco is turning <em>3!</em></h1>
+      <p class="lead">Naeco doesn't need many toys, and we get most of his toys secondhand. So this year, instead of new toys, we're trying something different: adventure funds. What he loves most is going places and trying new things. If you'd like to give him a gift, you can add to one of the funds below. We'll use each gift for the activity you choose and share photos with you.</p>
+      <p class="how"><b>How to give:</b> Tap an amount, or skip it and type your own in Venmo. The note fills in for you, so we'll know which fund your gift is for.<br><b>No Venmo?</b> You can send us a check, or ask us for our Zelle details. Just let us know which fund it's for.</p>
+      <nav class="nav" aria-label="Fund groups" id="nav"></nav>
+    </div>
+    <div class="art">
+    <img class="snap" src="images/hero.jpg" alt="Naeco laughing as he holds up a tall stack of toy ice cream scoops">
+    <svg class="scene" viewBox="0 0 440 380" role="img" aria-label="A carousel with bobbing animals and three balloons">
+      <defs>
+        <linearGradient id="pole" x1="0" x2="1"><stop offset="0" stop-color="#e9b21f"/><stop offset="1" stop-color="#ffe08a"/></linearGradient>
+        <clipPath id="roofclip"><path d="M60 140 L220 52 L380 140 Z"/></clipPath>
+        <g id="horse">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke="var(--ho)" stroke-width="11"><path d="M22 8 L36 17 L31 30"/><path d="M12 11 L25 21 L22 33"/><path d="M-22 9 L-36 21 L-48 25"/><path d="M-14 11 L-23 25 L-35 31"/></g>
+            <g stroke="var(--hb)" stroke-width="7.5"><path d="M22 8 L36 17 L31 30"/><path d="M12 11 L25 21 L22 33"/><path d="M-22 9 L-36 21 L-48 25"/><path d="M-14 11 L-23 25 L-35 31"/></g>
+          </g>
+          <g fill="#5c4a3d"><circle cx="31" cy="31" r="3.6"/><circle cx="22" cy="34" r="3.6"/><circle cx="-49" cy="25" r="3.6"/><circle cx="-36" cy="31" r="3.6"/></g>
+          <path d="M-32 -8 C-48 -12 -56 4 -50 22 C-47 10 -42 2 -33 0 Z" fill="var(--hm)"/>
+          <path d="M30 -4 C34 -14 36 -24 40 -30 C44 -27 52 -22 60 -24 C66 -26 67 -34 62 -38 L51 -50 L47 -60 L41 -52 C30 -46 24 -30 16 -14 C4 -17 -12 -17 -22 -14 C-34 -12 -38 2 -32 10 C-24 16 14 16 24 10 C28 7 30 3 30 -4 Z" fill="var(--hb)" stroke="var(--ho)" stroke-width="2"/>
+          <path d="M41 -51 C33 -50 26 -38 22 -28 C20 -22 18 -18 15 -15 C11 -22 16 -38 26 -48 C31 -53 37 -54 41 -51 Z" fill="var(--hm)"/>
+          <path d="M47 -55 C51 -53 53 -50 53 -46 C50 -48 48 -51 47 -55 Z" fill="var(--hm)"/>
+          <path d="M-12 -16 C-8 -24 8 -24 12 -16 L10 -6 L-10 -6 Z" fill="var(--hs)"/>
+          <path d="M-12 -16 C-8 -22 8 -22 12 -16" fill="none" stroke="#ffc63a" stroke-width="3"/>
+          <path d="M61 -28 L47 -44 M47 -44 L41 -32" fill="none" stroke="var(--hs)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="51" cy="-41" r="2.4" fill="#1d2233"/>
+          <circle cx="62" cy="-31" r="1.4" fill="#5c4a3d"/>
+        </g>
+      </defs>
+      <g transform="translate(78 26) scale(.85)">
+        <path d="M0 58 C-6 90 10 120 -10 170" stroke="var(--soft)" stroke-width="1.5" fill="none"/>
+        <path d="M-34 66 C-30 100 -16 130 -10 170" stroke="var(--soft)" stroke-width="1.5" fill="none"/>
+        <path d="M30 70 C24 110 0 140 -10 170" stroke="var(--soft)" stroke-width="1.5" fill="none"/>
+        <ellipse cx="-34" cy="40" rx="22" ry="27" fill="#ffc63a"/><ellipse cx="-41" cy="30" rx="6" ry="9" fill="#fff" opacity=".45"/>
+        <ellipse cx="30" cy="44" rx="22" ry="27" fill="#4dabf7"/><ellipse cx="23" cy="34" rx="6" ry="9" fill="#fff" opacity=".45"/>
+        <ellipse cx="0" cy="30" rx="25" ry="30" fill="#f2503f"/><ellipse cx="-8" cy="18" rx="7" ry="10" fill="#fff" opacity=".45"/>
+        <text x="0" y="42" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="800" font-size="32" fill="#fff">3</text>
+      </g>
+      <ellipse cx="220" cy="350" rx="190" ry="20" fill="#000" opacity=".08"/>
+      <path d="M44 312 Q220 360 396 312 L396 334 Q220 382 44 334 Z" fill="#c2410c"/>
+      <ellipse cx="220" cy="312" rx="176" ry="30" fill="#f08c3a"/>
+      <ellipse cx="220" cy="308" rx="176" ry="26" fill="#ffb066"/>
+      <rect x="211" y="130" width="18" height="182" fill="url(#pole)"/>
+      <g fill="url(#pole)"><rect x="98" y="140" width="7" height="172"/><rect x="335" y="140" width="7" height="172"/><rect x="160" y="140" width="7" height="180"/><rect x="273" y="140" width="7" height="180"/></g>
+      <g clip-path="url(#roofclip)">
+        <rect x="40" y="40" width="360" height="110" fill="#fff"/>
+        <g fill="#f2503f"><path d="M220 52 L60 140 L100 140 Z"/><path d="M220 52 L140 140 L180 140 Z"/><path d="M220 52 L220 140 L260 140 Z"/><path d="M220 52 L300 140 L340 140 Z"/></g>
+      </g>
+      <g fill="#f2503f">
+        <circle cx="72" cy="142" r="14"/><circle cx="152" cy="142" r="14"/><circle cx="232" cy="142" r="14"/><circle cx="312" cy="142" r="14"/>
+      </g>
+      <g fill="#fff"><circle cx="112" cy="142" r="14"/><circle cx="192" cy="142" r="14"/><circle cx="272" cy="142" r="14"/><circle cx="352" cy="142" r="14"/></g>
+      <rect x="56" y="134" width="328" height="10" rx="5" fill="#ffc63a"/>
+      <rect x="217" y="22" width="5" height="32" fill="var(--soft)"/>
+      <path d="M222 22 L250 30 L222 38 Z" fill="#ffc63a"/>
+      <g class="bob"><use href="#horse" transform="translate(101 224) scale(.88)" style="--hb:#ffffff;--ho:#d9d2c4;--hm:#ffc63a;--hs:#f2503f"/></g>
+      <g class="bob b3"><use href="#horse" transform="translate(339 224) scale(-.88 .88)" style="--hb:#d3f0ff;--ho:#9cc9e4;--hm:#f2503f;--hs:#7048e8"/></g>
+      <g class="bob b2"><use href="#horse" transform="translate(220 246)" style="--hb:#ffd8e4;--ho:#e8a9bd;--hm:#7048e8;--hs:#4dabf7"/></g>
+    </svg>
+    </div>
+  </div>
+</header>
+
+<main class="band" style="padding-top:8px">
+  <div class="wrap">
+    <div id="groups"></div>
+    <div class="thanks">
+      <div>
+        <h2>Thank you for celebrating with us</h2>
+        <p class="note" style="margin-top:8px">Any amount is wonderful. You've watched Naeco grow, and we're so happy you're part of his growing up.</p>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>With love from Naeco's family</footer>
+
+<script>
+{
+const VENMO = "RachelChang1014"; // Venmo username without the @, e.g. "Rachel-Chang-12"
+const CHILD = "Naeco";
+const AMTS = [10, 25, 50];
+
+const I = {
+  icecream:'<circle cx="32" cy="22" r="12" fill="currentColor" opacity=".35"/><circle cx="32" cy="22" r="12"/><path d="M21 30 L32 58 L43 30"/><path d="M26 40 L38 36 M28 48 L36 45"/>',
+  carousel:'<path d="M10 26 L32 10 L54 26 Z" fill="currentColor" opacity=".35"/><path d="M10 26 L32 10 L54 26 Z"/><path d="M18 26 V54 M32 26 V54 M46 26 V54 M8 54 H56"/><circle cx="18" cy="38" r="4" fill="currentColor"/><circle cx="46" cy="42" r="4" fill="currentColor"/>',
+  playground:'<path d="M12 56 V16 M24 56 V16 M12 26 H24 M12 36 H24 M12 46 H24"/><path d="M24 18 H30 C44 18 42 50 58 54" stroke-width="5"/>',
+  restaurant:'<path d="M8 32 H56 C56 46 46 56 32 56 C18 56 8 46 8 32 Z" fill="currentColor" opacity=".35"/><path d="M8 32 H56 C56 46 46 56 32 56 C18 56 8 46 8 32 Z"/><path d="M38 6 L24 30 M50 8 L32 30"/>',
+  animal:'<ellipse cx="25" cy="16" rx="5" ry="13"/><ellipse cx="39" cy="16" rx="5" ry="13"/><circle cx="32" cy="40" r="16" fill="currentColor" opacity=".35"/><circle cx="32" cy="40" r="16"/><circle cx="26" cy="38" r="1.5" fill="currentColor"/><circle cx="38" cy="38" r="1.5" fill="currentColor"/><path d="M29 46 Q32 49 35 46"/>',
+  tractor:'<path d="M12 32 V12 H30 L34 32 Z" fill="currentColor" opacity=".35"/><path d="M12 32 V12 H30 L34 32 Z"/><path d="M32 32 H54 V42 H44"/><path d="M46 32 V20"/><circle cx="20" cy="44" r="12"/><circle cx="20" cy="44" r="3.5" fill="currentColor"/><circle cx="48" cy="48" r="7"/>',
+  bowling:'<circle cx="24" cy="40" r="16" fill="currentColor" opacity=".35"/><circle cx="24" cy="40" r="16"/><circle cx="20" cy="34" r="2" fill="currentColor"/><circle cx="27" cy="33" r="2" fill="currentColor"/><circle cx="24" cy="40" r="2" fill="currentColor"/><path d="M48 8 C44 8 43 14 45 18 C41 24 40 34 43 44 C44 52 45 56 48 56 C51 56 52 52 53 44 C56 34 55 24 51 18 C53 14 52 8 48 8 Z"/><path d="M45 22 H51"/>',
+  berries:'<circle cx="22" cy="36" r="11" fill="currentColor"/><circle cx="42" cy="32" r="11" fill="currentColor" opacity=".6"/><circle cx="33" cy="50" r="10" fill="currentColor" opacity=".8"/><path d="M42 12 C40 18 36 22 32 24 M42 12 C48 14 50 18 50 22"/>',
+  museum:'<path d="M8 24 L32 10 L56 24 Z" fill="currentColor" opacity=".35"/><path d="M8 24 L32 10 L56 24 Z"/><path d="M16 30 V48 M26 30 V48 M38 30 V48 M48 30 V48 M8 54 H56"/>',
+  theater:'<path d="M6 10 H58"/><path d="M10 10 C10 30 16 44 26 54 H10 Z" fill="currentColor" opacity=".35"/><path d="M54 10 C54 30 48 44 38 54 H54 Z" fill="currentColor" opacity=".35"/><path d="M32 26 L35 33 L42 33 L36 38 L38 45 L32 41 L26 45 L28 38 L22 33 L29 33 Z" fill="currentColor"/>',
+  swim:'<circle cx="38" cy="20" r="6" fill="currentColor"/><path d="M16 32 C24 26 32 26 44 30"/><path d="M6 42 q6-6 13 0 t13 0 t13 0 t13 0"/><path d="M6 54 q6-6 13 0 t13 0 t13 0 t13 0" opacity=".6"/>',
+  music:'<path d="M26 46 V14 L50 9 V40"/><path d="M26 22 L50 17"/><circle cx="20" cy="46" r="7" fill="currentColor"/><circle cx="44" cy="40" r="7" fill="currentColor"/>',
+  travel:'<path d="M6 30 L58 10 L44 54 L32 38 Z" fill="currentColor" opacity=".35"/><path d="M6 30 L58 10 L44 54 L32 38 Z"/><path d="M32 38 L58 10 M32 38 L30 50"/>',
+  cap:'<path d="M6 26 L32 14 L58 26 L32 38 Z" fill="currentColor" opacity=".35"/><path d="M6 26 L32 14 L58 26 L32 38 Z"/><path d="M18 32 V44 C24 50 40 50 46 44 V32"/><path d="M58 26 V42"/><circle cx="58" cy="44" r="3" fill="currentColor"/>'
+};
+
+const GROUPS = [
+  {id:"treats", name:"Little treats", sub:"Small joys for any week", cls:"p1", funds:[
+    {key:"carousel", title:"Carousel rides", text:"Round and round on his favorite ride.", photo:"images/carousel.jpg"},
+    {key:"icecream", title:"Ice cream & cupcakes", text:"A sweet treat after a big day out.", photo:"images/icecream.jpg"},
+    {key:"playground", title:"Indoor playground", text:"Climbing, sliding and running around on rainy days.", photo:"images/playground.jpg"},
+    {key:"restaurant", title:"Favorite restaurants", text:"Family meals at the places he loves to eat.", photo:"images/restaurant.jpg"}
+  ]},
+  {id:"outings", name:"Adventures & outings", sub:"Days out to see, touch and taste", cls:"p2", funds:[
+    {key:"berries", title:"Blueberry picking", text:"Summer mornings filling a bucket, and his tummy.", photo:"images/berries.jpg"},
+    {key:"animal", title:"Animal patting", text:"Farm and petting zoo visits to meet animals up close.", photo:"images/animal.jpg"},
+    {key:"tractor", title:"Tractor rides", text:"Bumpy, happy rides around the farm.", photo:"images/tractor.jpg"},
+    {key:"bowling", title:"Bowling", text:"Pushing the ball down the ramp and cheering for every pin.", photo:"images/bowling.jpg"},
+    {key:"museum", title:"Museum visits", text:"Hands-on exhibits for a curious little explorer.", photo:"images/museum.jpg"},
+    {key:"theater", title:"Live performances", text:"Musicals and plays made for little audiences.", photo:"images/theater.jpg"}
+  ]},
+  {id:"classes", name:"Learning & growing", sub:"Classes that build new skills", cls:"p3", funds:[
+    {key:"swim", title:"Swimming class", text:"Building water confidence, one splash at a time.", photo:"images/swim.jpg"},
+    {key:"music", title:"Music class", text:"Singing, clapping and dancing with other kids.", photo:"images/music.jpg"}
+  ]},
+  {id:"future", name:"Big dreams", sub:"Saving for later", cls:"p4", funds:[
+    {key:"travel", title:"Travel fund", text:"Family trips to new places and to visit the people we love.", photo:"images/travel.jpg"},
+    {key:"cap", title:"529 education savings", text:"A head start for his future. We add these gifts to his 529 college savings plan.", photo:"images/cap.jpg"}
+  ]}
+];
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const chosen = {};
+
+const link = f => {
+  const note = `${CHILD}'s 3rd birthday: ${f.title}`;
+  let u = `https://venmo.com/${encodeURIComponent(VENMO)}?txn=pay&note=${encodeURIComponent(note)}`;
+  if (chosen[f.key]) u += `&amount=${chosen[f.key]}`;
+  return u;
+};
+
+const btn = f => VENMO
+  ? `<a class="btn" id="go-${f.key}" href="${esc(link(f))}" target="_blank" rel="noopener">Gift with Venmo</a>`
+  : `<span class="btn off" id="go-${f.key}">Venmo link coming soon</span>`;
+
+const card = f => `
+  <article class="card">
+    <div class="ph">${f.photo ? `<img src="${esc(f.photo)}" alt="${esc(CHILD)}: ${esc(f.title)}" loading="lazy">` : `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[f.key]}</svg>`}</div>
+    <div class="body">
+      <h3>${esc(f.title)}</h3>
+      <p>${esc(f.text)}</p>
+      <div class="amts" role="group" aria-label="Suggested amount for ${esc(f.title)}">
+        ${AMTS.map(a => `<button class="chip" type="button" id="amt-${f.key}-${a}" data-k="${f.key}" data-a="${a}" aria-pressed="false">$${a}</button>`).join("")}
+      </div>
+      ${btn(f)}
+    </div>
+  </article>`;
+
+document.getElementById("nav").innerHTML = GROUPS.map(g => `<a href="#${g.id}">${esc(g.name)}</a>`).join("");
+document.getElementById("groups").innerHTML = GROUPS.map(g => `
+  <section class="group ${g.cls}" id="${g.id}">
+    <div class="ghead"><h2>${esc(g.name)}</h2><p>${esc(g.sub)}</p></div>
+    <div class="grid">${g.funds.map(card).join("")}</div>
+  </section>`).join("");
+
+const byKey = {};
+GROUPS.forEach(g => g.funds.forEach(f => byKey[f.key] = f));
+
+document.getElementById("groups").addEventListener("click", e => {
+  const c = e.target.closest(".chip");
+  if (!c) return;
+  const k = c.dataset.k, a = Number(c.dataset.a);
+  chosen[k] = chosen[k] === a ? 0 : a;
+  document.querySelectorAll(`.chip[data-k="${k}"]`).forEach(b => b.setAttribute("aria-pressed", String(Number(b.dataset.a) === chosen[k])));
+  const go = document.getElementById("go-" + k);
+  if (VENMO && go) go.href = link(byKey[k]);
+});
+}
+</script>
+</body>
+</html>
