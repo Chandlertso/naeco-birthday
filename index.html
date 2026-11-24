@@ -208,7 +208,6 @@ const GROUPS = [
     {key:"restaurant", title:"Favorite restaurants", text:"Family meals at the places he loves to eat.", photo:"images/restaurant.jpg"}
   ]},
   {id:"outings", name:"Adventures & outings", sub:"Days out to see, touch and taste", cls:"p2", funds:[
-    {key:"berries", title:"Blueberry picking", text:"Summer mornings filling a bucket, and his tummy.", photo:"images/berries.jpg"},
     {key:"animal", title:"Animal patting", text:"Farm and petting zoo visits to meet animals up close.", photo:"images/animal.jpg"},
     {key:"tractor", title:"Tractor rides", text:"Bumpy, happy rides around the farm.", photo:"images/tractor.jpg"},
     {key:"bowling", title:"Bowling", text:"Pushing the ball down the ramp and cheering for every pin.", photo:"images/bowling.jpg"},
@@ -234,6 +233,15 @@ const link = f => {
   if (chosen[f.key]) u += `&amount=${chosen[f.key]}`;
   return u;
 };
+
+// Phones: open the Venmo app directly so the note keeps its spaces (the web link turns them into "+").
+const appLink = f => {
+  const note = `${CHILD}'s 3rd birthday: ${f.title}`;
+  let u = `venmo://paycharge?txn=pay&recipients=${encodeURIComponent(VENMO)}&note=${encodeURIComponent(note)}`;
+  if (chosen[f.key]) u += `&amount=${chosen[f.key]}`;
+  return u;
+};
+const isPhone = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 const btn = f => VENMO
   ? `<a class="btn" id="go-${f.key}" href="${esc(link(f))}" target="_blank" rel="noopener">Gift with Venmo</a>`
@@ -263,6 +271,22 @@ const byKey = {};
 GROUPS.forEach(g => g.funds.forEach(f => byKey[f.key] = f));
 
 document.getElementById("groups").addEventListener("click", e => {
+  const gift = e.target.closest("a.btn");
+  if (gift && isPhone && VENMO) {
+    const f = byKey[gift.id.slice(3)];
+    if (!f) return;
+    e.preventDefault();
+    const web = link(f);
+    let left = false;
+    const onHide = () => { if (document.hidden) left = true; };
+    document.addEventListener("visibilitychange", onHide);
+    window.location.href = appLink(f);
+    setTimeout(() => {
+      document.removeEventListener("visibilitychange", onHide);
+      if (!left && !document.hidden) window.location.href = web; // no Venmo app: fall back to the website
+    }, 1600);
+    return;
+  }
   const c = e.target.closest(".chip");
   if (!c) return;
   const k = c.dataset.k, a = Number(c.dataset.a);
